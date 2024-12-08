@@ -32,18 +32,12 @@ Workflow structure
 
 **Data Preprocessing**
   Text analysis(review)
-    sentiment label
-      hybrid method: lexicon-based + side effect label
-        lexicon used: VADER 
-        side effect dataset: SIDER
-        method: to address up the importance of sentiment of side effect in medicine domain, and side effect grouped by drugs.
-        nagation handle: ?
     tokenization 
     text normalization
     remove stopwords
     lemmatization    
       NLTK with POS Tagging
-      '''
+ '''
 How it Works:
 Uses NLTK’s pos_tag to assign POS tags (e.g., verb, noun, adjective) to each word.
 Converts these tags to WordNet-compatible tags for lemmatization.
@@ -55,7 +49,12 @@ Cons:
 POS tagging adds computational overhead.
 Slower than SpaCy for large datasets.
 '''
-
+    sentiment label
+      hybrid method: lexicon-based + side effect label + extreme rating label
+        lexicon used: VADER 
+        side effect dataset: SIDER with nagation handle
+        Extreme rating score added
+        method: to address up the importance of sentiment of side effect in medicine domain, and side effect grouped by drugs.
 
 **Reference：**
 
